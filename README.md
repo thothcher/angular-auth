@@ -52,7 +52,7 @@ There is no build step. Tailwind v4 and the fonts load from CDNs, so the machine
 | 17 | Big picture | a request lights up every stage of the chain |
 | 18 | Common mistakes | the mistake cards appear one after another |
 | 19 | Summary | gradient key phrases |
-| 20 | Thank you / Q&A | dark slide with a glow and drifting chips |
+| 20 | Thank you / Q&A | solid dark slide with drifting chips |
 
 ## Animated explainers
 
@@ -75,7 +75,7 @@ There is no build step. Tailwind v4 and the fonts load from CDNs, so the machine
 
 - **One file.** All markup, CSS and JS live in `lecture-51-auth.html`. The diagrams are inline SVG animated with CSS `@keyframes`, so they stay sharp on any projector and need no image files.
 - **Palette.** The colour tokens are at the top of the file, in the `@theme` block (`--color-live`, `--color-box-p`, and so on). Change them there and every slide follows.
-- **Background.** Three blurred "aurora" blobs drift behind the slides. Their colours change per slide and come from the `AURORA` list in the script.
+- **Background.** One solid colour, set on `body` in the hand-written `<style>` block. There are no gradients or patterns behind the slides.
 - **Diagrams.** Each diagram's CSS sits in the `/* ── ანიმირებული დიაგრამები ── */` block, labelled with its slide number (`/* 08 · XSS … */`).
 - **Players.** Animations that should run only while their slide is visible register in `players` with `play()` and `stop()`. Examples are the step-by-step sequence diagram, the silent-refresh toggle, the JWT highlight cycle and the idle-session countdown.
 - **Accessibility.** Slide transitions and all loops turn off when the OS asks for reduced motion (`prefers-reduced-motion`).
